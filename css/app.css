@@ -72,7 +72,7 @@ header.navigation {
 	gap: 2rem;
 }
 
-.logo h1 {
+.logo .header-title {
 	font-weight: 300;
 	font-size: 1.5rem;
 }
