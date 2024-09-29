@@ -27,10 +27,11 @@
 		<title>Portfolio Irsal</title>
 	</head>
 	<body>
-		<header>
+		<header class="navigation">
 			<div class="navbar-container">
 				<div class="logo">
 					<img src="img/logo.png" alt="logo-lazlab" />
+					<h1>Irsal's<br>Portfolio</h1>
 				</div>
 				<nav class="nav-list">
 					<ul>
@@ -43,7 +44,7 @@
 			</div>
 		</header>
 
-		<main>
+		<main id="main">
 			<div class="content">
 				<article id="about" class="about">
 					<div class="content-description">
@@ -139,8 +140,26 @@
 			</div>
 
 			<aside>
-				<div class="social-media">
+				 <div id="message" class="message">
+					<div class="message-content">
+						<header class="msg-header">
+							<h1>Hello👋</h1>
+
+							<span onclick="closeMsg()">
+								<i class="fas fa-times"></i>
+							</span>
+						</header>
+						<p>You can contact me via clicking the LinkedIn or Instagram button below.</p>
+					</div>
+				 </div>
+
+				<div class="contact">
 					<ul>
+						<li>
+							<a href="#" onclick="toggleMessage()">
+								<img src="img/pp.png" alt="potrait">
+							</a>
+						</li>
 						<li>
 							<a
 								href="https://www.linkedin.com/in/irsal-lazuard-izzatillah-850927229/"
@@ -169,5 +188,7 @@
             </div>
 			<p>Belajar Dasar Pemrograman Web &#169; 2024, Dicoding Academy</p>
 		</footer>
+
+		<script src="js/main.js"></script>
 	</body>
 </html>

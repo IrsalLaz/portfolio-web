@@ -13,7 +13,7 @@ body {
 	flex-direction: column;
 }
 
-header {
+header.navigation {
 	position: sticky;
 	top: 0;
 
@@ -65,6 +65,18 @@ header {
 	font-weight: 700;
 }
 
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.logo h1 {
+	font-weight: 300;
+	font-size: 1.5rem;
+}
+
 .logo img {
 	width: 120px;
 	box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.2);
@@ -76,12 +88,12 @@ aside {
 	inset-inline-end: 0;
 }
 
-aside .social-media {
+aside .contact {
 	display: flex;
 	height: 100%;
 }
 
-aside .social-media ul {
+aside .contact ul {
 	padding: 2rem;
 	margin: auto;
 	border-top-left-radius: 40px;
@@ -96,19 +108,79 @@ aside .social-media ul {
 	gap: 1.5rem;
 }
 
-aside .social-media li {
+aside .contact li {
 	list-style-type: none;
 }
 
-aside .social-media li a {
+aside .contact li a {
 	color: white;
 	font-size: 1.5rem;
 	text-decoration: none;
 	transition: all 0.25s ease-in-out;
 }
 
-aside .social-media li a:hover {
+aside .contact li a:hover {
 	color: #a0a29a;
+}
+
+aside .message {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 100%;
+
+	position: absolute;
+	right: 100px;
+	transition: all 0.2s ease-in-out;
+}
+
+aside .message .message-content {
+	background-color: white;
+	border-radius: 40px;
+}
+
+aside .message p {
+	margin: 0.2rem;
+	padding: 1.5rem 2rem;
+	text-align: justify;
+}
+
+aside .message.show {
+	display: flex;
+}
+
+aside .message-content .msg-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin: 0rem 2rem;
+}
+
+aside .message-content .msg-header span {
+	color: #3c3d37;
+	height: 24px;
+	width: 24px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+}
+
+aside .message-content .msg-header i:hover {
+	color: #181c14;
+}
+
+aside img {
+	width: 24px;
+	height: 24px;
+	object-fit: cover;
+	border-radius: 999px;
+	background-color: white;
 }
 
 .content article {
@@ -309,10 +381,14 @@ footer {
 		height: 120px;
 	}
 
-	aside .social-media ul {
+	aside .contact ul {
 		padding: 2rem 1rem;
 		border-top-left-radius: 24px;
 		border-bottom-left-radius: 24px;
+	}
+
+	aside .message {
+		right: 70px;
 	}
 }
 
